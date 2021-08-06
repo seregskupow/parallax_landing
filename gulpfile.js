@@ -49,7 +49,7 @@ function js() {
 		// .pipe(webpack({output: {filename: 'bundle.js'} }))
 		.pipe(changed(source))
 		.pipe(concat('bundle.js'))
-		.pipe(uglify())
+		.pipe(uglify({ mangle: { toplevel: true } }))
 		.pipe(rename({
 			extname: '.min.js'
 		}))
@@ -95,7 +95,7 @@ function reload(done) {
 
 function watchFiles() {
 	watch('./src/styles/**/*', css);
-	watch('./src/js/**/', js);
+	watch('./src/js/**/*', js);
 	watch('./src/img/*', img);
 	watch('./*.html', reload);
 	watch('./src/libs/*', libs);
