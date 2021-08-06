@@ -1,0 +1,53 @@
+:root {
+	font-size: 10px;
+}
+*,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+.swiper-container {
+	overflow: hidden;
+	height: 570px;
+
+	@include media("lg") {
+		overflow: visible;
+	}
+}
+.swiper-container-android {
+	& .swiper-slide {
+		overflow: hidden;
+
+		@include media("lg") {
+			overflow: visible;
+		}
+	}
+}
+.swiper-container .swiper-pagination {
+	z-index: 20;
+}
+.swiper-pagination-bullet-active {
+	background: var(--contrast-color);
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+
+	@include media("xl") {
+		width: 70%;
+	}
+}
+
+.h1-container {
+	margin-bottom: 8rem;
+}

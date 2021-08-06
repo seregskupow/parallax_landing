@@ -1,0 +1,12 @@
+$gold: #ad7835;
+$darkWhite: #c0c0c0;
+$lightGrey: #737373;
+$darkGrey: #1d1d1d;
+$grey: #373737;
+:root {
+	--contrast-color: #{$gold};
+	--text-color: #{$darkWhite};
+	--light-grey: #{$lightGrey};
+	--dark-grey: #{$darkGrey};
+	--grey: #{$grey};
+}
